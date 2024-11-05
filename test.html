@@ -1,0 +1,39 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    $(function(){
+
+        function sendurl(url,data){
+            // axios.post(url, data)
+            //     .then(function (response) {
+            //         console.log(response);
+            //     })
+            //     .catch(function (error) {
+            //         console.log(error);
+            //     })
+            //     .finally(function () {
+            //         // always executed
+            //     });  
+         
+        }
+
+
+        const data = {
+            "username":"BraHandsome",
+            "email":"admian@gmail.com",
+            "mobile":"0553812349",
+            "password" : "1234"
+        }
+        $(".signin").click(function(){
+        axios({
+            method:'post',
+            url: "api/v2/backoffice/signin",
+            data: data
+            },function(data){
+                window.location.href = data.route
+            }); 
+        })
+    })
+</script>
+
+<button class="signin">Sign in</button>

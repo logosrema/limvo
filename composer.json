@@ -1,0 +1,7 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "leafs/leaf": "^3.7",
+        "leafs/cors": "^1.2"
+    }
+}
